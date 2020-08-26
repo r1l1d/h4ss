@@ -16,6 +16,8 @@ env:
   - ADDON="grafana"
   - ADDON="calibreweb"
   - ADDON="calibreweb_comics"
+  - ADDON="nextcloud"
+  - ADDON="kanboard"
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - ./build.sh $ADDON 
