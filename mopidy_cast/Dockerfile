@@ -11,7 +11,7 @@ RUN set -ex \
         curl jq git build-essential libasound2-dev libvorbisidec-dev libvorbis-dev libflac-dev alsa-utils libavahi-client-dev avahi-daemon \
 	build-essential debhelper dh-make dh-systemd quilt fakeroot lintian \
  && cd /tmp/ \
- && git clone https://github.com/badaix/snapcast.git \
+ && git clone https://github.com/r1l1d/snapcast.git \
  && cd snapcast \
  && git checkout v${SNAPCAST_VERSION} \
  && cd externals \
@@ -42,7 +42,7 @@ COPY mopidy_cast.conf /var/lib/mopidy/.config/mopidy/mopidy_cast.conf
 COPY run.sh /
 RUN chmod a+x /run.sh
 
-EXPOSE 6600 6680 1704 1705
+EXPOSE 6600 6601 6680 6681 1704 1705
 
 
 CMD [ "/run.sh" ]
